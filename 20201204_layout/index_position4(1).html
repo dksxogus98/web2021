@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>position4(1복습)</title>
+	<!-- link[href="css"]+ /reset.css -->
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		/*header*/
+		#header{
+			width: 1000px; 
+			height: 110px;
+			background-color: #ccc;
+			margin: 0 auto;
+			position: relative;
+			border-radius: 5px;
+		}
+		#header h1{
+			width: 90px; height: 90px;
+			background-color: #ccc;
+			position: absolute;
+			top: 10px; left: 10px;
+		}
+		#header h1 a{
+			display: block;
+			line-height: 90px;
+			color: white;
+		}
+		#header h1 a:hover{
+			background-color: #fff; 
+			color: lightsteelblue;
+			border-radius: 30px;
+		}
+
+		.util_menu{
+			width: 300px;
+			background-color: darkgray;
+			position: absolute;
+			top: 10px; right: 10px;
+			border-radius: 30px;
+		}
+		.util_menu li{float: left; width: 100px;}
+		.util_menu a{
+			display: block;
+			text-align: center;
+			color: white;
+			line-height: 40px;
+		}
+		.util_menu a:hover{
+			background-color: white; color: darkgray;
+			border-radius: 30px;
+		}
+
+		.gnb{
+			width: 700px;
+			background-color: pink;
+			position: absolute;
+			right: 10px; bottom: 10px;
+			border-radius: 30px;
+		}
+		.gnb li{
+			float: left; width: 20%;
+		}
+		.gnb a{
+			display: block;
+			text-align: center;
+			color: white;
+			line-height: 40px;
+		}
+		.gnb a:hover{
+			background-color: lightsteelblue; color: pink;
+			border-radius: 30px;
+		}
+
+	</style>
+</head>
+<body>
+	<header id="header">
+		<h1><a href="#">LOGO</a></h1>
+		<div class="util_menu">
+			<ul class="classfix">
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">CONTACT</a></li>
+				<li><a href="#">SITE MAP</a></li>
+			</ul>
+		</div>
+		<nav class="gnb">
+			<ul class="classfix">
+				<li><a href="#">MENU1</a></li>
+				<li><a href="#">MENU2</a></li>
+				<li><a href="#">MENU3</a></li>
+				<li><a href="#">MENU4</a></li>
+				<li><a href="#">MENU5</a></li>
+			</ul>
+		</nav>
+	</header>
+</body>
+</html>
