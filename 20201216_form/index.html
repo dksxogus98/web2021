@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>form</title>
+</head>
+<body>
+	<form action="welcome.php" method="get">
+		<fieldset>
+			<legend>기본정보</legend>
+			<label for="name">이름</label>
+			<input type="text" name="na" id="name"> <!-- id-for같은 이름 적용(포커스맞추기get방식-타사이트한테 자료를 전송) -->
+			<label for="email">이메일</label>              <!--  post 같은 서버안에서 자료전송 -->
+			<input type="text" name="email" id="email">
+		</fieldset>
+		<input type="submit">
+	</form>
+</body>
+</html>
