@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>anipos</title>
+	<style>
+		html,body{height: 100%;}
+		body{
+			background-image: url(images/bg02.jpg);
+			/*격자로(여러개) 이미지 나오는경우 방지 bgr,bgp -사이트축소시 이미지 변화 없음.*/
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			overflow-x: hidden;
+			overflow-y: scroll;
+		}
+		.wrap{
+			position: absolute;
+			/*가운데 정렬*/
+			left: 50%; /*transform: translateX(-50%)translateY(-50%);*/ transform: translate(-50%,-50%);
+			top: 50%; 
+			z-index: 2; /*(이미지 뒤쪽으로 적용)*/
+		}
+		.img01{
+			/*애니메이션에서 꼭 사용! poa,por*/
+			position: absolute;
+			/*top-위,top+아래*/
+			top: -200px;right: -100px;
+			animation-name: bal01;
+			animation-duration: 3s;
+			animation-iteration-count: infinite; /*애니메이션 반복적용*/
+			animation-direction: alternate; /*50%제거하고 100%에 top값 -250px을 넣을경우 적용하면 끊기지 않고 움직임.*/
+		}
+
+		@keyframes bal01{
+			0%{top: -200px;}
+			/*50%{top: -250px;}*/
+			100%{top: -250px;}
+		}
+		/*form앞으로 나오게함*/
+		.wrap form{position: relative;}
+		.searchTitle{
+			display: block;position: absolute;
+			width: 60px;height: 20px;
+			background-image: url(images/searchtext.jpg);
+			text-indent: -9999px;left: 20px;top: 18px;z-index: 2;
+		}
+		.searchInp{
+			position: relative;width: 400px;height: 50px;
+			text-indent: 90px;font-size: 18px;
+			border: 3px solid #000; border-radius: 25px;
+		}
+		.searchBtn{
+			position: absolute;
+			width: 40px;height: 40px;
+			right: 10px;top: 50%; transform:translateY(-50%);
+			border: 2px solid #aaa;
+			border-radius: 20px;
+			background: #fff;
+			background-image: url(images/search.jpg);
+			background-repeat: no-repeat;
+			background-position: center;
+			text-indent: -9999px;
+		}
+		.img00{
+			/*position사용시 left값 적용*/
+			position: absolute;
+			left: 0;bottom: 0;
+			animation-name: air;
+			animation-duration: 3s;
+			animation-fill-mode: forwards; /* 애니메이션 한번 적용(한번적용하고 끝남)*/
+			animation-timing-function: inherit; /*애니메이션이 일직선으로 움직임*/
+		}
+		@keyframes air {
+			from{left: 0;bottom: 0;}
+			to{left: 1800px;bottom: 1500px;}
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<img src="images/content2.png" alt="" class="img01">
+		<!-- form:post -->
+		<form action="#" method="post">
+			<label for="search" class="searchTitle">search</label>
+			<input type="text" id="search"
+			placeholder="검색어를 입력하세요" class="searchInp">
+			<input type="submit" value="button" class="searchBtn">
+		</form>
+	</div>
+	<img src="images/reallyAir.png" alt="" class="img00">
+</body>
+</html>
