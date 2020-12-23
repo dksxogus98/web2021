@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/*table기본값*/
+		table, td, th{
+			border: 1px solid #000;
+			border-collapse: collapse;
+		}
+		table{width: 500px;}
+		td, th{height: 50px;}
+		td{padding: 10px;}
+		.tac{text-align: center;}  /*class정하고 텍스트가운데정렬*/
+	</style>
+</head>
+<body>
+	<!-- table>tr>td*4>lorem1 -->
+	<table class>
+		<colgroup>
+			<col width="15%">
+			<col width="30%">
+			<col width="*%">
+			<col width="15%">
+		</colgroup>
+		<tr> <!-- 같은단어 영역선택<ctrl + D> -->
+			<th>Lorem.</th>
+			<th>Voluptates!</th>
+			<th>Rerum.</th>
+			<th>Laudantium!</th>
+		</tr>
+		<tr> <!-- rowspan-세로로 칸 합치기 colspan 가로로 칸 합치기 -->
+			<td rowspan="2">Lorem.</td> <!--  숫자는 합치는 칸수를 적용 -->
+			<td>Voluptates!</td>
+			<td class="tac">Rerum.</td>
+			<td>Laudantium!</td>
+		</tr>
+		<tr>
+			<!-- <td>Lorem.</td> --> <!-- rowspan적용했을경우 지워줌 -->
+			<td colspan="3">Voluptates!</td>
+			<!-- <td>Rerum.</td>
+			<td>Laudantium!</td> -->   <!-- colspan적용했을경우 지워줌 -->
+		</tr>
+		<tr>
+			<td>Lorem.</td>
+			<td>Voluptates!</td>
+			<td>Rerum.</td>
+			<td>Laudantium!</td>
+		</tr>
+	</table>
+</body>
+</html>
