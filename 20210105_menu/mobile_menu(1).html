@@ -3,36 +3,66 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>responsive menu</title>
-	<link rel="stylesheet" href="../css/reset.css">
+	<title>togglemenu</title>
+	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/all.css">
-	<link rel="stylesheet" href="css/style.css">
-	<script src="../js/jquery-3.1.1.min.js"></script>
-	<script>
+	<script src="js/jquery-3.1.1.min.js"></script>
+    <script>
 		$(document).ready(function(){
 			$(".toggle").click(function(){
-				
-				// if(조건){
-				// 	true실행문;
-				// }else{
-				// 	false실행문;
-				// }
-
-				if( $("#myTopMenu").attr("class") == "topNav clearfix" ){
-					$("#myTopMenu").addClass("responsive");
+				if( $("topMenu").attr("class") == "tnv clearfix" ){
+					$("topMenu").addClass("responsive");
 				}else{
-					$("#myTopMenu").removeClass("responsive");
+					$("topMenu").removeClass("responsive");
 				}
-				console.log( $("#myTopMenu").attr("class") );
+				console.log( $("topMenu").attr("class") );
 				
 			});
 		});
 	</script>
+    <style>
+    .tnv{background: #fea694;}
+    .tnv a{
+    	display: block; 
+    	float: left;
+    	padding: 14px 16px;
+    	color: #fff;
+    }
+    .tnv a.toggle{float: right;display: none;}
 
+
+    @media screen and (max-width:575px){
+
+	    .menuWrap{
+		    position:fixed;width: 100%;
+        }
+	    .tnv a{display: none;}
+	    .tnv a:first-child{display: block;}
+	    .tnv a.toggle{display: block;}
+
+	    .tnv.responsive a{float:none;display: block;}
+	    .tnv.responsive a.toggle{position: absolute;right: 0;top: 0;}
+
+    }
+
+
+    @media screen and (min-width:576px) and (max-width:991px){
+	    .menuWrap{width: 100%;}
+    }
+
+    @media screen and (min-width:992px){ /*pc*/
+	    .menuWrap{
+		    width: 1200px;
+		    position: fixed;
+		    top:10px;left:50%;
+		    transform:translateX(-50%);
+	    }
+    }
+    </style>
 </head>
 <body>
 	<div class="menuWrap">
-		<nav id="myTopMenu" class="topNav clearfix">
+		<nav id="topMenu" class="tnv clearfix">
 			<a href="#">HOME</a>
 			<a href="#"><i class="fab fa-pagelines"></i> NEWS</a>
 			<a href="#"><i class="fas fa-file-signature"></i> CONTACT</a>
