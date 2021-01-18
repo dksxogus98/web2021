@@ -1,18 +1,58 @@
 @charset "utf-8";
+html,body{height: 100%;}
 header#main_header{}
 
 /*header top*/
 #header_top{
 	width: 100%;
 	position: fixed;
-	top:0;z-index:1;
+	top:0;z-index:99999;
+	background:#fff;
 }
 
-#header_top h1{float: left;background:red;height: 50px;}
-#main_menu{float: right;}
-#main_menu li{float: left;height: 50px;}
-#main_menu li a{display: block;line-height:50px;padding:0 30px;}
-.toggleMenu{display: none;}
+#header_top>h1{float: left;height: 50px;margin-left:10px;line-height:50px;}
+#header_top h1 a{
+	width: 200px;height: 50px;
+	background-image: url(../images/logo_red.png); 
+	background-position: center; 
+	background-repeat: no-repeat;
+}
+
+
+#main_menu{
+	background:#fff;position: fixed;top:0;left:-100%;
+	width: 100%;height: 100%;
+}
+#main_menu ul{
+	background:#f44336;position: absolute;
+	top:50%;transform:translateY(-50%);
+	width:100%;border-radius: 50px;
+
+}
+#main_menu li{float: none;height: 50px;}
+#main_menu li a{
+	display: block;line-height:50px;text-align: center;
+	color:#fff;
+}
+
+
+.toggleMenu{
+	display: block;position: absolute;top:5px;right:10px;
+	width: 40px;height: 40px;
+	cursor:pointer;
+}
+.toggleMenu div{
+	width: 25px;height: 4px;background:#f44336;
+	border-radius:2px;position: absolute;left:7.5px;
+}
+.toggleMenu .bar1{top:10px;}
+.toggleMenu .bar2{top:18px;}
+.toggleMenu .bar3{bottom:10px;}
+
+.toggleMenu.change .bar1{transform:rotate(-45deg);top:18px;background:#f44336;}
+.toggleMenu.change .bar2{opacity:0;}
+.toggleMenu.change .bar3{transform:rotate(45deg);top:18px;background:#f44336;}
+
 
 /*slier*/
 .sliderWrap{height: 400px;}
@@ -51,13 +91,13 @@ header#main_header{}
 
 /*content*/
 .content{width: 100%;}
-.content ul li{
+.content>ul>li{
 	float: left;width: 25%;position: relative;
 	overflow: hidden;transition:0.3s;
 	height: 170px;
 }
-.content ul li a{color:white;}
-/*.content ul li:nth-child(2n){background:skyblue;}*/
+.content>ul>li a{color:white;}
+/*.content>ul>li:nth-child(2n){background:skyblue;}*/
 
 /*content layout*/
 .content li.ct1st{background: #92c1d5;width: 50%;}

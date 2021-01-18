@@ -18,7 +18,7 @@ header#main_header{height:1950px;position: relative;margin-bottom:100px;}
 
 #main_menu{float: right;}
 #main_menu li{float: left;height: 50px;}
-#main_menu li a{display: block;line-height:50px;padding:0 30px;}
+#main_menu li a{display: block;line-height:50px;padding:0 30px;color: #fff;}
 .toggleMenu{display: none;}
 
 
