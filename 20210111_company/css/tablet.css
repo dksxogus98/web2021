@@ -32,11 +32,18 @@ header#main_header{height:1950px;position: relative;margin-bottom:100px;}
 
 }
 .sliderWrap li.slider_1st{
-	background-image: url(../images/mainimg01.jpg);
+	background-image: url(../images/banner_mb01.png);
 }
 .sliderWrap li.slider_2st{
-	background-image: url(../images/mainimg02.jpg);
+	background-image: url(../images/banner_mb02.jpg);
 }
+.sliderWrap li.slider_3st{
+	background-image: url(../images/banner_mb03.jpg);
+}
+.sliderWrap li.slider_4st{
+	background-image: url(../images/banner_mb04.png);
+}
+
 
 
 .sliderWrap .slider_txt{
