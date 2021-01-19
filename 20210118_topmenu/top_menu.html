@@ -5,13 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>top menu</title>
-  <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/jquery.bxslider.css">
+  <link rel="stylesheet" href="../css/reset.css">
   <script src="../js/jquery-3.1.1.min.js"></script>
-  <script src="../js/jquery.bxslider.js"></script>
+  <script src="../js/jquery.bxSlider.js"></script>
   <script>
     $(document).ready(function(){
-      $(".visual").bxSlider();
+      $(".slider").bxSlider({
+        auto:true,
+        pager:false,
+        // 밑에 점 삭제
+        controls:false
+        // 양 옆 버튼 삭제
+      });
     });
   </script>
   <style>
@@ -57,8 +63,16 @@
 
     nav.gnb>ul>li:hover .submenu{display: block;}
 
-    .visual{background:#6782ec;height: 400px;}
-    .slider img{display: block;width: 100%;}
+    .visual{width: 1000px;margin: 0 auto;}
+    .slider li img{width: 100%;}
+
+    .bx-wrapper{
+			-moz-box-shadow:none;
+			-webkit-box-shadow:none;
+			box-shadow:none;
+			border:0 none;
+		}
+
   </style>
 </head>
 <body>
