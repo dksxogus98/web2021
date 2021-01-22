@@ -50,7 +50,7 @@ header#main_header{height:1950px;position: relative;margin-bottom:100px;}
 	position: absolute;
 	width: 500px;left:50%;
 	margin-left:-250px;
-	/* text-align: center; */
+	 text-align: center; 
 	color:white;top:30%;
 }
 .sliderWrap .slider_txt h3{font-size:2em;}

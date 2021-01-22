@@ -57,7 +57,8 @@ header#main_header{}
 /*slier*/
 .sliderWrap{height: 400px;}
 .sliderWrap li{
-	height: 400px;_background:skyblue;
+	height: 400px;
+	/*background:skyblue;*/
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
