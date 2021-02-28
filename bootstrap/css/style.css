@@ -1,7 +1,8 @@
 :root{
    --blue:#0073ff;
    --blue1:#83b9fb;
-   --blue2:#044595;
+   --blue2:#0056c0;
+   --blue3:#72b0fc;
    --primary-color1:#4458cc;
    --primary-color2:#854fee;
    --bg-color1:#efefef;
@@ -22,19 +23,15 @@
   justify-content: space-between;
   padding: 0.5em 1rem;
 }
-.headerWrap .nav-item{font-size:1.3em;border-bottom: 4px solid transparent;transition:0.3s}
+.headerWrap .nav-item{font-size:1.3em;border-bottom: 4px solid transparent;transition:0.3s;}
 .headerWrap .nav-item:hover{border-bottom: 4px solid var(--blue);}
-.headerWrap.fixed-top{box-shadow:0 0 20px gray;transition:0.3s; background: var(--blue);}
-.mainNav .navbar-nav .nav-item .nav-link{color:var(--blue1);}
-.mainNav .navbar-nav .nav-item .nav-link:hover{color:var(--blue2);}
-
-/* visual Wrap start */
-.button.primary-button{box-shadow: var(--box-shadow);color:white;}
-.button.secondery-button{box-shadow: var(--box-shadow);color:white}
+.headerWrap .nav-item .nav-link:hover{color:var(--blue);}
+.headerWrap.fixed-top{box-shadow:0 0 20px gray;transition:0.3s; background: var(--bg-color3);}
 
 
 /* content */
-.content{background:var(--bg-color1);}
+/* .content{background:var(--blue3);} */
+.button.primary-button{box-shadow: var(--box-shadow);color:var(--blue2)}
 
 /* service,portfolio */
 .service h2.title:after,
@@ -47,13 +44,13 @@
 .customer p.subtitle{color:var(--text-color);}
 .service .card img{height: 200px;}
 /* border: 1px solid #000; 단축키 bd+ transition/transform 애니메이션*/
-.service .card{background:var(--bg-color2);border: 0 none;transition: 0.3s;}
+.service .card{border: 0 none;transition: 0.3s;}
 .service .card:hover{box-shadow:var(--box-shadow);transform: scale(1.1);}
 
 .portfolio .button-group button{
   background:none;border:0 none;font-weight:bold;outline:none;font-size:1.1em
 }
-.portfolio .button-group button+button{margin-left: 30px;}
+.portfolio .button-group button + button{margin-left: 30px;}
 .portfolio .button-group button.active{color:var(--primary-color2)}
 .portfolio .element-item img{
   border-radius:5px

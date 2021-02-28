@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>:::COMPANY:::</title>
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/magnific-popup.css">
   <link rel="stylesheet" href="css/owl/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -20,33 +20,61 @@
   <script src="js/isotope.pkgd.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
-</head>
+  <style>
+    :root{
+      --primary-color1:#4458cc;
+      --primary-color2:#854fee;
+      --bg-color1:#efefef;
+      --bg-color2:#f0f0f0;
+      --text-color:#777;
+      --border-color:#20f1f1;
+      --gradient-color:linear-gradient(90deg,#4458dc 0%,#854fee 100%);
+      --shadow-color:0px 10px 30px rgba(118,85,225,0.3);
+      --box-shadow:0px 10px 20px rgba(57,56,61,0.3)
+    }
+    body{font-family: 'Luckiest Guy', cursive;
+}
+    /* headerwrap */
+    .headerWrap .nav-item{font-size:1.3em;border-bottom: 4px solid transparent;transition:0.3s}
+    .headerWrap .nav-item:hover{border-bottom: 4px solid var(--primary-color2);}
+    .headerWrap.fixed-top{box-shadow:0 0 20px gray;transition:0.3s}
 
+    /* visual wrap start */
+    .visualWrap{
+      background:url(assets/slider-bg.svg) no-repeat center;
+      background-size:cover;
+    }
+    .button.primary-button{box-shadow: var(--box-shadow);background:var(--gradient-color);color:white}
+    .button.secondary-button{box-shadow:var(--box-shadow)}
+
+    /* content */
+    .content{background:var(--bg-color1);}
+  </style>
+</head>
 <body>
 <!-- headerWrap start -->
-<div class="headerWrap">
+<div class="headerWrap bg-white">
   <div class="container pl-0 pr-0">
     <nav class="navbar navbar-expand-lg navbar-light">
-      <a href="index.html" class="navbar-brand">
-      <img src="playlist/logo.svg" alt="" class="img-fluid">
+      <a href="#" class="navbar-brand">
+        <img src="assets/logo.svg" alt="" class="img-fluid">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <i class="navbar-toggler-icon"></i>
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- div.collapse.navbar-collapse#navbarNav -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav text-uppercase ml-auto">
-          <li class="nav-item">
-            <a href="sub_menu1.html" class="nav-link">ABOUT</a>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a href="#!" class="nav-link">HOME</a>
           </li>
           <li class="nav-item">
-            <a href="sub_menu2.html" class="nav-link">BUSINESS</a>
+            <a href="about.html" class="nav-link">ABOUT</a>
           </li>
           <li class="nav-item">
-            <a href="#!" class="nav-link">COMMERCE&MD</a>
+            <a href="service.html" class="nav-link">SERVICE</a>
           </li>
           <li class="nav-item">
-            <a href="#!" class="nav-link">PRESS</a>
+            <a href="#!" class="nav-link">COMMUNITY</a>
           </li>
         </ul>
       </div>
@@ -55,95 +83,100 @@
 </div>
 <!-- headerWrap end -->
 
-<!-- visual Wrap start -->
-<div id="visualWrap" class="carousel slide" date-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="playlist/playlist_b_bg.jpg" alt="slider1">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="playlist/muply_bg.jpg" alt="slider2">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="playlist/plylistorlgin_b_bg.jpg" alt="slider3">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="playlist/plystyle_b_bg.jpg" alt="slider4">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="playlist/teenply_b_bg.jpg" alt="slider5">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="playlist/ply_b_bg.jpg" alt="slider6">
+<!-- visual wrap start -->
+<div class="visualWrap">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-6 col-lg-4 align-self-center mb-4 mb-md-0">
+        <h2 class="text-center text-md-left">Lorem ipsum dolor sit.</h2>
+        <p class="mb-3 text-center text-md-left">Lorem ipsum dolor sit amet, consectetur.</p>
+        <a href="#!" class="btn button primary-button px-4 d-block d-md-inline-block mb-3 mb-md-0">MORE</a>
+        <a href="#!" class="btn button secondary-button btn-outline-primary px-4 d-block d-md-inline-block">EMAIL</a>
+      </div>
+      <div class="col-md-6 col-lg-8 text-center">
+        <img src="assets/slider.svg" alt="" class="img-fluid">
+      </div>
     </div>
   </div>
 </div>
-<!-- visual Wrap end -->
+<!-- visual wrap end -->
 
-<!-- content start -->
-<div class="content mt-4">
+<!-- content -->
+<div class="content">
   <div class="container py-5">
     <div class="row">
       <div class="col-md-6 text-center order-2 order-md-1">
-        <img src="playlist/Playlist_slogan.svg" alt="" class="img-fluid">
+        <img src="assets/sobre.svg" alt="" class="img-fluid">
       </div>
-      <div class="col-md-6 order-1 order-md-2 text-center text-md-left mb-5 mb-md-0" style="color:#72b0fc;">
-        <h2>PLAY&nbsp;YOUR&nbsp;STOPY</h2>
-        <h4>플레이리스트는 2017년 네이버 자회사 네이버 웹툰과 스노우가 공동 투자하여 설립한 회사입니다.</h4>
-        <p>살아있는 캐릭터 묘사와 공감가는 스토리를 트렌디하게 풀어내어, 시청자들을 즐겁고 행복하게 만들고자 합니다.</p>
-        <a href="#!" class="btn button primary-button px-3 d-block d-md-inline-block">ABOUT US</a>
+      <div class="col-md-6 order-1 order-md-2 text-center text-md-left mb-5 mb-md-0">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, est.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ab laboriosam maxime consectetur soluta nihil, distinctio ut. Laudantium ab, aspernatur ducimus quia explicabo quo atque accusamus impedit magnam, architecto mollitia!</p>
+        <a href="#!" class="btn button primary-button px-3 d-block d-md-inline-block">ENTER CONTACT</a>
       </div>
     </div>
   </div>
 </div>
-<!-- content end -->
+<!-- content -->
 
-<!-- service start -->
+<style>
+.service h2.title:after,
+.portfolio h2.title:after,
+.customer h2.title:after
+{
+  content:"";display: block;width: 200px;height: 2px;background:var(--primary-color1);
+  margin: 10px auto;
+}
+.service p.subtitle,
+.portfolio p.subtitle,
+.customer p.subtitle
+{color:var(--text-color)}
+
+.service .card img{height: 200px;}
+.service .card{background:var(--bg-color2);border: 0 none;transition:0.3s}
+.service .card:hover{box-shadow:var(--box-shadow);transform:scale(1.1)}
+</style>
+
+<!-- service -->
 <div class="service">
   <div class="container py-5">
-    <h2 class="title text-center">PLAYLIST</h2>
-    <p class="subtitle text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, sint.</p>
+    <h2 class="title text-center">SERVICE</h2>
+    <p class="subtitle text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, inventore?</p>
     <div class="row">
 
-      <!-- .col-md-6.col-lg-3 -->
       <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
         <div class="card pt-4 pl-3 pr-3 text-center">
-          <!-- 이미지크기가 맞지 않을 경우 크기를 고정시킴(style시트에 적용) -->
-          <!-- 항상 이미지 적용시키고 class="img-fluid"적용시키기  m-3은 이미지 작게 만듬-->
           <img src="assets/destaque1.svg" alt="" class="img-fluid m-3">
           <div class="card-body">
-            <h4 class="card-title">ABOUT</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, nisi.</p>
+            <h4 class="card-title">Lorem ipsum.</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, fuga.</p>
           </div>
         </div>
       </div>
       <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
         <div class="card pt-4 pl-3 pr-3 text-center">
-          <!-- 항상 이미지 적용시키고 class="img-fluid"적용시키기  m-3은 이미지 작게 만듬-->
           <img src="assets/destaque2.svg" alt="" class="img-fluid m-3">
           <div class="card-body">
-            <h4 class="card-title">BUSINESS</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, nisi.</p>
+            <h4 class="card-title">Lorem ipsum.</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, fuga.</p>
           </div>
         </div>
       </div>
       <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
         <div class="card pt-4 pl-3 pr-3 text-center">
-          <!-- 항상 이미지 적용시키고 class="img-fluid"적용시키기  m-3은 이미지 작게 만듬-->
           <img src="assets/destaque3.svg" alt="" class="img-fluid m-3">
           <div class="card-body">
-            <h4 class="card-title">COMMERCE/MD</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, nisi.</p>
+            <h4 class="card-title">Lorem ipsum.</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, fuga.</p>
           </div>
         </div>
       </div>
       <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
         <div class="card pt-4 pl-3 pr-3 text-center">
-          <!-- 항상 이미지 적용시키고 class="img-fluid"적용시키기  m-3은 이미지 작게 만듬-->
           <img src="assets/destaque4.svg" alt="" class="img-fluid m-3">
           <div class="card-body">
-            <h4 class="card-title">PRESS</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, nisi.</p>
+            <h4 class="card-title">Lorem ipsum.</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, fuga.</p>
           </div>
         </div>
       </div>
@@ -151,15 +184,30 @@
     </div>
   </div>
 </div>
-<!-- service end -->
 
-<!-- portfolio start -->
+
+
+
+
+<style>
+.portfolio .button-group button{
+  background:none;border:0 none;font-weight:bold;outline:none;font-size:1.1em
+}
+.portfolio .button-group button+button{margin-left: 30px;}
+.portfolio .button-group button.active{color:var(--primary-color2)}
+.portfolio .element-item img{
+  border-radius:5px
+}
+.portfolio .element-item img:hover{
+  box-shadow:var(--box-shadow)
+}
+</style>
+<!-- portfolio -->
 <div class="portfolio">
   <div class="container py-5">
     <h2 class="title text-center">PORTFOLIO</h2>
-    <p class="subtitle text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, sint.</p>
+    <p class="subtitle text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, inventore?</p>
     <div class="button-group mb-3">
-      <!-- data-filter="*" 전체라는 뜻임 -->
       <button type="button" data-filter="*" class="active" id="btn1">ALL</button>
       <button type="button" data-filter=".website">WEBSITE</button>
       <button type="button" data-filter=".illust">ILLUST</button>
@@ -167,7 +215,7 @@
     </div>
     <div class="row view">
       <!--  -->
-      <div class="col-6 col-lg-3 element-item website  mb-3">
+      <div class="col-6 col-lg-3 element-item website mb-3">
         <a href="assets/servicos/1.jpg" class="popup_link mb-3 d-block">
           <img src="assets/servicos/1.jpg" alt="" class="img-fluid">
         </a>
@@ -176,7 +224,7 @@
       </div>
       <!--  -->
       <!--  -->
-      <div class="col-6 col-lg-3 element-item illust  mb-3">
+      <div class="col-6 col-lg-3 element-item illust mb-3">
         <a href="assets/servicos/2.jpg" class="popup_link mb-3 d-block">
           <img src="assets/servicos/2.jpg" alt="" class="img-fluid">
         </a>
@@ -185,7 +233,7 @@
       </div>
       <!--  -->
       <!--  -->
-      <div class="col-6 col-lg-3 element-item photoshop  mb-3">
+      <div class="col-6 col-lg-3 element-item website mb-3">
         <a href="assets/servicos/3.jpg" class="popup_link mb-3 d-block">
           <img src="assets/servicos/3.jpg" alt="" class="img-fluid">
         </a>
@@ -194,7 +242,7 @@
       </div>
       <!--  -->
       <!--  -->
-      <div class="col-6 col-lg-3 element-item illust  mb-3">
+      <div class="col-6 col-lg-3 element-item photoshop mb-3">
         <a href="assets/servicos/4.jpg" class="popup_link mb-3 d-block">
           <img src="assets/servicos/4.jpg" alt="" class="img-fluid">
         </a>
@@ -203,7 +251,7 @@
       </div>
       <!--  -->
       <!--  -->
-      <div class="col-6 col-lg-3 element-item photoshop  mb-3">
+      <div class="col-6 col-lg-3 element-item illust mb-3">
         <a href="assets/servicos/5.jpg" class="popup_link mb-3 d-block">
           <img src="assets/servicos/5.jpg" alt="" class="img-fluid">
         </a>
@@ -212,7 +260,7 @@
       </div>
       <!--  -->
       <!--  -->
-      <div class="col-6 col-lg-3 element-item illust  mb-3">
+      <div class="col-6 col-lg-3 element-item illust mb-3">
         <a href="assets/servicos/6.jpg" class="popup_link mb-3 d-block">
           <img src="assets/servicos/6.jpg" alt="" class="img-fluid">
         </a>
@@ -220,25 +268,49 @@
         <p>Lorem ipsum dolor sit.</p>
       </div>
       <!--  -->
+      <!--  -->
+      <div class="col-6 col-lg-3 element-item illust mb-3">
+        <a href="assets/servicos/7.jpg" class="popup_link mb-3 d-block">
+          <img src="assets/servicos/7.jpg" alt="" class="img-fluid">
+        </a>
+        <h4 class="mb-0">Lorem ipsum.</h4>
+        <p>Lorem ipsum dolor sit.</p>
+      </div>
+      <!--  -->
+      <!--  -->
+      <div class="col-6 col-lg-3 element-item photoshop mb-3">
+        <a href="assets/servicos/8.jpg" class="popup_link mb-3 d-block">
+          <img src="assets/servicos/8.jpg" alt="" class="img-fluid">
+        </a>
+        <h4 class="mb-0">Lorem ipsum.</h4>
+        <p>Lorem ipsum dolor sit.</p>
+      </div>
+      <!--  -->
+
     </div>
   </div>
 </div>
-<!-- portfolio end -->
 
-<!-- customer start -->
+
+<!-- CUSTOMER -->
+<style>
+.customer .sliderView{
+  padding:30px;border-radius:5px;
+  background:var(--bg-color2);
+}
+</style>
 <div class="customer mb-5">
   <div class="container">
     <h2 class="title text-center">CUSTOMER</h2>
-    <p class="subtitle text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, sint.</p>
+    <p class="subtitle text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, inventore?</p>
     <div class="owl-carousel owl-theme owl-loaded">
       <!-- #1 -->
       <div>
         <div class="sliderView d-flex">
           <img src="assets/user.svg" alt="" class="img-fluid" style="max-width:150px">
-          <div class-"pl-3">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, quaerat!</p>
+          <div class="pl-3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, veritatis.</p>
             <p>
-              <!-- img : class="float-right"를 적용가능 -->
               <img src="assets/quote.svg" alt="" class="d-block ml-auto" style="max-width:35px">
             </p>
           </div>
@@ -249,10 +321,9 @@
       <div>
         <div class="sliderView d-flex">
           <img src="assets/user.svg" alt="" class="img-fluid" style="max-width:150px">
-          <div class-"pl-3">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, quaerat!</p>
+          <div class="pl-3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, veritatis.</p>
             <p>
-              <!-- img : class="float-right"를 적용가능 -->
               <img src="assets/quote.svg" alt="" class="d-block ml-auto" style="max-width:35px">
             </p>
           </div>
@@ -263,10 +334,9 @@
       <div>
         <div class="sliderView d-flex">
           <img src="assets/user.svg" alt="" class="img-fluid" style="max-width:150px">
-          <div class-"pl-3">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, quaerat!</p>
+          <div class="pl-3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, veritatis.</p>
             <p>
-              <!-- img : class="float-right"를 적용가능 -->
               <img src="assets/quote.svg" alt="" class="d-block ml-auto" style="max-width:35px">
             </p>
           </div>
@@ -277,29 +347,44 @@
       <div>
         <div class="sliderView d-flex">
           <img src="assets/user.svg" alt="" class="img-fluid" style="max-width:150px">
-          <div class-"pl-3">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, quaerat!</p>
+          <div class="pl-3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, veritatis.</p>
             <p>
-              <!-- img : class="float-right"를 적용가능 -->
               <img src="assets/quote.svg" alt="" class="d-block ml-auto" style="max-width:35px">
             </p>
           </div>
         </div>
       </div>
       <!-- #4 -->
+
     </div>
   </div>
 </div>
-<!-- customer end -->
 
-<!-- footer start -->
+
+<style>
+.footer ul.icon li + li{
+  margin-left: 25px;
+}
+.footer .icon a{
+  display: block;width: 40px;height: 40px;
+  border-radius:20px;background:transparent;text-align: center;
+  line-height:40px;transition:0.3s
+}
+.footer .icon a:hover{
+  box-shadow:0 0 10px rgba(0,0,0,0.3)
+}
+.footer .icon img{max-width:20px}
+
+</style>
+
 <div class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 text-center text-md-left mb-4 py-3">
-        <img src="playlist/ply_icon_white.png" alt="" class="logo_icon img-fluid">
+      <div class="col-md-6 text-center text-md-left mb-4">
+        <img src="assets/logo.svg" alt="" class="img-fluid">
       </div>
-      <div class="col-md-6 py-3">
+      <div class="col-md-6">
         <ul class="icon d-flex justify-content-center justify-content-md-end">
           <li><a href="#!"><img src="assets/facebook.svg" ></a></li>
           <li><a href="#!"><img src="assets/twitter.svg" ></a></li>
@@ -311,8 +396,6 @@
     </div>
   </div>
 </div>
-<!-- footer end -->
-
 
 
 <script>
@@ -370,7 +453,3 @@
   });
 
 </script>
-
-
-</body>
-</html>
