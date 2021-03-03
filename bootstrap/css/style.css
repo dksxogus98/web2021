@@ -9,6 +9,8 @@
    --bg-color2:#f0f0f0;
    --bg-color3:#ffffff;
    --text-color:#777;
+   --text-color1:#024082;
+   --text-color2:#00125e;
    --border-color:#20f1f1;
    --gradient-color:linear-gradient(90deg,#4458dc 0%,#854fee 100%);
    --shadow-color:0px 10px 30px rgba(118,85,225,0.3);
@@ -28,10 +30,11 @@
 .headerWrap .nav-item .nav-link:hover{color:var(--blue);}
 .headerWrap.fixed-top{box-shadow:0 0 20px gray;transition:0.3s; background: var(--bg-color3);}
 
+/* SliderWarp start */
 
-/* content */
-/* .content{background:var(--blue3);} */
-.button.primary-button{box-shadow: var(--box-shadow);color:var(--blue2)}
+/* visual wrap start */
+    .button.primary-button{box-shadow: var(--box-shadow);background:var(--gradient-color);color:white}
+    .button.secondary-button{box-shadow:var(--box-shadow)}
 
 /* service,portfolio */
 .service h2.title:after,
@@ -41,7 +44,7 @@
 }
 .service p.subtitle,
 .portfolio p.subtitle,
-.customer p.subtitle{color:var(--text-color);}
+.customer p.subtitle{color:var(--text-color1);}
 .service .card img{height: 200px;}
 /* border: 1px solid #000; 단축키 bd+ transition/transform 애니메이션*/
 .service .card{border: 0 none;transition: 0.3s;}
@@ -58,6 +61,8 @@
 .portfolio .element-item img:hover{
   box-shadow:var(--box-shadow)
 }
+.card-body .card-title{color:var(--text-color2)}
+.card-body{color:var(--text-color1)}
 
 /* customer */
 .customer .sliderView{
@@ -66,19 +71,6 @@
 
 /* footer */
 .footer{
+  letter-spacing:0.02em;
   background-color: var(--blue)
 }
-.footer .logo_icon img{width: }
-
-.footer ul.icon li + li{
-margin-left: 25px;
-}
-.footer .icon a{
-display: block;width: 40px;height: 40px;
-border-radius:20px;background:transparent;text-align: center;
-line-height:40px;transition:0.3s
-}
-.footer .icon a:hover{
-box-shadow:0 0 10px rgba(0,0,0,0.3)
-}
-.footer .icon img{max-width:20px}
