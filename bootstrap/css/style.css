@@ -44,7 +44,7 @@
 }
 .service p.subtitle,
 .portfolio p.subtitle,
-.customer p.subtitle{color:var(--text-color1);}
+.customer p.subtitle{color:var(--text-color2);}
 .service .card img{height: 200px;}
 /* border: 1px solid #000; 단축키 bd+ transition/transform 애니메이션*/
 .service .card{border: 0 none;transition: 0.3s;}
@@ -62,7 +62,7 @@
   box-shadow:var(--box-shadow)
 }
 .card-body .card-title{color:var(--text-color2)}
-.card-body{color:var(--text-color1)}
+.card-body{color:var(--text-color2)}
 
 /* customer */
 .customer .sliderView{
