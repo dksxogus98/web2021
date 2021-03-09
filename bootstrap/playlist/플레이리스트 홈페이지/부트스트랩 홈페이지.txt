@@ -31,7 +31,7 @@ Asia's No1. Digital Studio, Playlist
 
 뮤직 MUSIC- 음악, 댄스, 예능, 아이돌, 아티스트까지 팬덤과 대중을 모두 사로잡는 콘텐츠,
          더욱 다채로운 음악와 K-POP을 만나다.
-
+             다채로운 음악과 K-POP을 경험하고 싶다면, MUPLY
 미디어 MEDIA - 플레이리스트가 기획하고 제작한 취향 저격 드라마와
             음악 콘텐츠를 만나볼 수 있는 디지털 플랫폼
 
@@ -94,3 +94,98 @@ dl_dfficial@playlistcorp.com
         Seoul Korea 06160
 
        ⓒ copyright 2020 playlist
+
+
+
+About Us
+
+플레이리스트는 2017년 네이버 자회사 네이버 웹툰과 스노우가 공동 투자하여 설립한 회사 입니다.
+모바일 드라마 열풍을 선도한 <연애플레이리스트>,<에이틴>,<엑스엑스>등을 시작으로 세계로 뻗어나가고 있는 
+No.1 디지털 스튜디오입니다.
+
+Vision&Mission
+
+플레이리스트는 아시아 대중문화시장을 선도하는 No.1 디지털스튜디오를 지향합니다.
+살아있는 캐릭터 묘사와 공감가는 스토리를 트렌디하게 풀어내어, 시청자들을즐겁고 행복하게 만들고자 합니다. 
+
+
+
+growing 성장하는 
+매일 더 나은 콘텐츠를 통해 시청자와 함께 성장해 나갑니다.
+
+empathize 공감하는
+누구든지 공감할 수 있는 스토리로 사람들의 마음을 흔들고, 더 나아가 세상을 흔드는 콘텐츠를 만듭니다.
+
+playful 즐거운
+사람들의 마음을 사로잡는, 즐거운 콘텐츠를 통해 대중문화를 만들어 갑니다.
+
+trendy 선도하는
+1020세대가 지금 가장 주목하는 화제의 중심이 되는 콘텐츠, 플레이리스트는 언제나 시청자와 업계에 새로운 기준을 제시합니다.
+
+
+<!-- customer start -->
+<div class="customer mb-5">
+  <div class="container">
+    <h2 class="title text-center">#PLY</h2>
+    <p class="subtitle text-center mb-5 font-weight-bold" style="font-family: 'Poppins', sans-serif;">일상을 드라마처럼, 드라마를 일상처럼.</p>
+    <div class="loop owl-carousel owl-theme owl-loaded">
+      <div class="owl-stage-outer">
+        <div class="owl-stage">
+          <!-- #1 -->
+          <div class="owl-item active center" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="display: block; height: 100%;">
+            <img src="playlist/growing.svg" alt="">
+            <div class="item">
+              <h6 class="text-center" style="bottom: -30px;">Growing</h6>
+              <h5 class="text-center">성장하는</h5>
+              <p>매일 더 나은 콘텐츠를 통해 시청자와 함께 성장해 나갑니다.</p>
+            </div>
+          </div>
+          <!-- #1 -->
+          <!-- #2 -->
+          <div class="owl-item active center">
+            <img src="playlist/empathize.svg" alt="">
+            <div class="item">
+              <h6 class="text-center">Empathize</h6>
+              <h5 class="text-center">공감하는</h5>
+            </div>
+            <p>
+              누구든지 공감할 수 있는 스토리로 사람들의 마음을 흔들고,
+              <br class="po">
+              더 나아가 세상을 흔드는 콘텐츠를 만듭니다.
+            </p>
+          </div>
+          <!-- #2 -->
+          <!-- #3 -->
+          <div class="owl-item active center">
+            <img src="playlist/playful.svg" alt="">
+            <div class="item">
+              <h6 class="text-center">Playful</h6>
+              <h5 class="text-center">즐거운</h5>
+            </div>
+            <p>
+              사람들의 마음을 사로잡는, 즐거운 콘텐츠를 통해
+              <br class="po">
+              대중문화를 만들어 갑니다.
+            </p>
+          </div>
+          <!-- #3 -->
+          <!-- #4 -->
+          <div class="owl-item active center">
+            <img src="playlist/trendy.svg" alt="">
+            <div class="item">
+              <h6 class="text-center">Trendy</h6>
+              <h5 class="text-center">선도하는</h5>
+            </div>
+            <p>
+              1020세대가 지금 가장 주목하는 화제의 중심이 되는 콘텐츠.
+              <br class="po">
+              플레이리스트는 언제나 시청자와 업계에 새로운 기준을 제시합니다.
+            </p>
+          </div>
+          <!-- #4 -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- customer end -->
