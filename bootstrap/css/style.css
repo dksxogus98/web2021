@@ -45,9 +45,7 @@ h5, h6{
 
 /* SliderWarp start */
 
-/* visual wrap start */
-.button.primary-button{box-shadow: var(--box-shadow);background:var(--gradient-color);color:white}
-.button.secondary-button{box-shadow:var(--box-shadow)}
+
 
 /* service,portfolio */
 .service h2.title:after,
@@ -75,8 +73,9 @@ h5, h6{
   box-shadow:var(--box-shadow)
 }
 .card-body .card-title{color:white;}
-.card-body .card-title{color:white;}
-
+.card-body .card-text{color:white;}
+.card-body .card-title1{color:var(--text-color2);}
+.card-body .card-text1{color:var(--text-color2);}
 /* customer */
 .customer .sliderView{
   padding: 30px; border-radius: 5px; background:var(--bg-color2)
