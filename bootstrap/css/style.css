@@ -95,3 +95,10 @@ h5, h6{
   letter-spacing:0.02em;
   background-color: var(--blue)
 }
+
+.alm-btn-wrap{
+  clear: both;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 80px;
+}
