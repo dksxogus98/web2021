@@ -43,8 +43,8 @@ h5, h6{
 .headerWrap .nav-item .nav-link:hover{color:var(--blue);}
 .headerWrap.fixed-top{box-shadow:0 0 20px gray;transition:0.3s; background: var(--bg-color3);}
 
-/* SliderWarp start */
-
+/* visual wrap start */
+.button.primary-button{box-shadow: var(--box-shadow);background:var(--gradient-color);color:white}
 
 
 /* service,portfolio */
