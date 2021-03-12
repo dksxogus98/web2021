@@ -433,7 +433,11 @@
   });
 
   //isotopo 실행초기화
-  $(".portfolio .button-group #btn1").trigger('click');
+  window.onload = function(){
+    $(".portfolio .button-group #btn1").trigger('click');
+    // $(".portfolio .button-group button").eq(0).trigger('click');
+  }
+
 
   //magnify
   $(".view .popup_link").magnificPopup({type:"image"})
