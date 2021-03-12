@@ -202,3 +202,87 @@ md
 
 COMMERCE
 플레이리스트가 만들어가는 콘텐츠의 스토리를 담아 탄생한 PB브랜드.<br>콘텐츠와 결합된 새로운 컨셉과 철학으로 차별화 된 고객 경험을 제안합니다.
+
+ppibib
+YOUNG의 솔직한 일상을 투영한 뷰티 브랜드 삐빕과<br>기분 좋은 VIBE의 뷰티 브랜드 어뮤즈의 콜라보 프로젝트<br>"삐빕 바이 어뮤즈"
+nearest but lost
+장면, 순간, 감정, 관계<br>니어리스트 벗 로스트는<br>4가지 기억의 조각을 향으로 담는다
+
+
+827 684
+
+
+
+<!-- customer start -->
+<div class="customer mb-5">
+  <div class="container">
+    <h2 class="title text-center">#PLY</h2>
+    <p class="subtitle text-center mb-5 font-weight-bold" style="font-family: 'Poppins', sans-serif;">일상을 드라마처럼, 드라마를 일상처럼.</p>
+    <div class="loop owl-carousel owl-theme owl-loaded">
+      <div class="owl-stage-outer">
+        <div class="owl-stage">
+          <!-- #1 -->
+          <div class="owl-item cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 100%; height: 100%;">
+            <div class="item" style="background: url(playlist/growing.svg) no-repeat center;height:500px;">
+            <div class="textWrap">
+                <h6 class="text-center">Growing</h6>
+               <h5 class="text-center">성장하는</h5>
+              <p class="st1">매일 더 나은 콘텐츠를 통해 시청자와 함께 성장해 나갑니다.</p>
+            </div>
+            </div>
+          </div>
+          <!-- #1 -->
+          <!-- #2 -->
+          <div class="owl-item active center">
+            <div class="item" style="background-image: url(playlist/empathize.svg) no-repeat center;height:500px;">
+              <h6 class="text-center">Empathize</h6>
+              <h5 class="text-center">공감하는</h5>
+              <p class="st1">
+                누구든지 공감할 수 있는 스토리로 사람들의 마음을 흔들고,
+                <br>
+                더 나아가 세상을 흔드는 콘텐츠를 만듭니다.
+              </p>
+            </div>
+          </div>
+          <!-- #2 -->
+          <!-- #3 -->
+          <div class="owl-item active">
+            <div class="item" style="background-image: url(playlist/playful.svg) no-repeat center;height:500px;">
+              <h6 class="text-center">Playful</h6>
+              <h5 class="text-center">즐거운</h5>
+              <p class="st1">
+                사람들의 마음을 사로잡는, 즐거운 콘텐츠를 통해
+                대중문화를 만들어 갑니다.
+              </p>
+            </div>
+          </div>
+          <!-- #3 -->
+          <!-- #4 -->
+          <div class="owl-item cloned">
+            <div class="item" style="background-image: url(playlist/trendy.svg) no-repeat center;height:500px;">
+              <h6 class="text-center">Trendy</h6>
+              <h5 class="text-center">선도하는</h5>
+              <p class="st1">
+                1020세대가 지금 가장 주목하는 화제의 중심이 되는 콘텐츠.
+                <br>
+                플레이리스트는 언제나 시청자와 업계에 새로운 기준을 제시합니다.
+              </p>
+            </div>
+          </div>
+          <!-- #4 -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- customer end -->
+
+
+<h1 class="title text-center py-3" style="font-size:4rem; color:#00125e;">MD</h1>
+    <h5 class=" text-center mb-5  font-weight-bold" style="font-size:1.5rem; color:#00125e;">에이틴 도하나 틴트를 내 파우치에서, 연플리 재인이의 졸업 작품을 내 책상 위에서.<br>
+      <br>드라마 속 아이템을 실제 상품으로 만나보세요.</p>
+
+트웬티 트웬티 KIT
+
+
+에이틴 X 페리페라(김하나 틴트)
