@@ -80,7 +80,7 @@
     $(function(){
       $("#fullpage").fullpage({
         menu:"#topMenu", //메뉴지정
-        anchors:["m1st","m2st","m3st","m4st","m5st"],
+        anchors:["m1st","m2st","m3st","m4st"],
         navigation:true,
         afterLoad:function(anchorslink,index){
           console.log(anchorslink+','+index);
@@ -100,6 +100,7 @@
 
         }
       });
+      jQuery('[data-youtube]').youtube_background();
     });
   </script>
 
@@ -111,7 +112,6 @@
       <li data-menuanchor="m2st"><a href="#m2st">menu2</a></li>
       <li data-menuanchor="m3st"><a href="#m3st">menu3</a></li>
       <li data-menuanchor="m4st"><a href="#m4st">menu4</a></li>
-      <li data-menuanchor="m5st"><a href="#m5st">menu4</a></li>
     </ul>
   </nav>
   <div id="fullpage">
@@ -155,14 +155,5 @@
 	    <div class="slide"><h1>And more text</h1></div>
     </div>
   </div>
-
-  <!-- section 5st -->
-  <div class="section page5" data-anchor="m4st">
-    <div class="slide "><h1>Simple Demo</h1></div>
-    <div class="slide"><h1>Only text</h1></div>
-    <div class="slide"><h1>And text</h1></div>
-    <div class="slide"><h1>And more text</h1></div>
-  </div>
-</div>
 </body>
 </html>

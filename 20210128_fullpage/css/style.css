@@ -1,0 +1,169 @@
+body{
+  overflow: hidden;
+  height: 100%;
+  /* font-family: 'Black Han Sans', sans-serif; */
+  font-family: 'Do Hyeon', sans-serif
+}
+
+#logo a{
+ position: fixed;
+ top: 20px;
+ left: 20px;
+ color:#fff;
+ font-weight: 700;
+ z-index: 99;
+ font-size: 1.9em;
+ -webkit-font-smoothing: antialiased;
+ -moz-font-smoothing: antialiased;
+}
+
+#logo img{
+ width: 200px;
+ height: 60px;
+}
+
+#topMenu{
+ position: fixed;
+ top: 20px;
+ right: 20px;
+ z-index: 70;
+ -webkit-font-smoothing: antialiased;
+ -moz-font-smoothing: antialiased;
+ letter-spacing: 1px;
+ font-size: 1.1em;
+}
+
+#navTop li{
+ display: inline-block;
+ margin: 10px 0;
+ position: relative;
+}
+
+#navTop a{
+ color:#fff;
+ padding: 0 1.1em 1.1em 1.1em;
+ text-decoration: none;
+}
+
+#navTop li.active a:after {
+ content: '';
+ margin: 0 1.1em 0 1.1em;
+ height: 2px;
+ background: #fff;
+ display: block;
+ position: absolute;
+ bottom: -6px;
+ left: 0;
+ right: 0;
+ display: block;
+}
+.section{
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.main{
+ width: 400px;position: absolute;top:50%;
+
+}
+.main h3{font-size:2em}
+.main p{margin-bottom: 20px;}
+.main a{
+ display: block;text-align: center;width: 150px;
+ border: 1px solid #fff;line-height:40px;
+ border-radius:10px;color:white;transition:0.3s
+}
+.main a:hover{background-color: #fff;color:#000}
+
+/* section page1 */
+.section.page1{background:#717cff; background-size: 100% 100%;}
+.main.one{
+  width: 100%;
+  position: absolute;
+  top: 65%;
+  color: #fff;
+  animation-direction: normal;
+}
+.main.one h3{text-align: center;}
+.main.one p{font-size: 20px;text-align: center;}
+
+
+
+/* section page2 */
+.section.page2{background:#fc7a7a;}
+.section.page2 .bbb01{}
+.main.two{right:200px;}
+.main.two h3{font-size: 5em; color: #fff;}
+.main.two p{font-size: 20px; color: #fff;}
+ #onView2st{right:-400px;transition:0.3s}
+ #onView2st.move{right: 200px;}
+ #lush2_video {
+    position: absolute;
+    bottom: 0;top: 0;right: 0;
+    width: 100%;height: 100%;
+    background-size: 100% 100%;
+    background-color: black;
+    background-position: center center;
+    object-fit: cover;
+}
+
+/* section page3 */
+/* .section.page3{background:#f9678d;} */
+.main.three{
+  left: 200px;
+  width: 100%;
+  position: absolute;
+}
+.main.three h3{font-size: 5em; color: #fff;}
+.main.three p{font-size: 20px; color: #fff;}
+#onView3st{left:-400px;transition:0.3s}
+#onView3st.move{left: 200px;}
+#lush3_video {
+   position: absolute;
+   bottom: 0;top: 0;right: 0;
+   width: 100%;height: 100%;
+   background-size: 100% 100%;
+   background-color: black;
+   background-position: center center;
+   object-fit: cover;
+}
+
+/* section page4 */
+.section.page4{background:#0cc6a4;text-align: center;}
+#four h3{font-size: 5em; color: #fff;}
+#four p{font-size: 20px; color: #fff;}
+
+
+/* section page5 */
+.section.page5{background:#ffea77;text-align: center;}
+
+
+.scroll{
+ position: absolute;bottom: 20px;left: 50%;transform:translateX(-50%);
+ animation-name:xScroll;
+ animation-duration:0.8s;
+ animation-iteration-count:infinite;
+ animation-direction:alternate;
+}
+
+@keyframes xScroll {
+ from{bottom:20px}
+ to{bottom: 40px;}
+}
+
+
+/* svgWrap */
+.svgWrap{width: 500px;position: absolute;left:50%;top:50%;transform: translate(-50%,-50%)}
+.svgWrap path{
+ /* stroke:#6f0293; */
+ stroke:#ffea77;
+ stroke-width:1;
+ fill:#f9678d;
+ animation:textview 1s forwards;
+}
+@keyframes textview{
+ from{opacity:0}
+ to{opacity:1}
+}

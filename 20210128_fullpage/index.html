@@ -7,123 +7,18 @@
   <title>fullpage</title>
   <link rel="stylesheet" href="css/fullpage.css">
   <link rel="stylesheet" href="css/reset.css">
-  <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
-
   <script src="js/jquery-3.1.1.min.js"></script>
   <script src="js/jquery.fullPage.js"></script>
+  <script src="../js/wow.js"></script>
+  <script src="js/jquery.colorbox-min.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
 
 
 
-  <style>
-  body{
-    overflow: hidden;
-    height: 100%;
-    /* font-family: 'Black Han Sans', sans-serif; */
-    font-family: 'Do Hyeon', sans-serif
-  }
-
-
-  #logo{
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    color:#fff;
-    font-weight: 700;
-    z-index: 99;
-    font-size: 1.9em;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-  }
-  #topMenu{
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 70;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    letter-spacing: 1px;
-    font-size: 1.1em;
-  }
-
-  #navTop li{
-    display: inline-block;
-    margin: 10px 0;
-    position: relative;
-  }
-
-  #navTop a{
-    color:#fff;
-    padding: 0 1.1em 1.1em 1.1em;
-    text-decoration: none;
-  }
-
-  #navTop li.active a:after {
-    content: '';
-    margin: 0 1.1em 0 1.1em;
-    height: 2px;
-    background: #fff;
-    display: block;
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    right: 0;
-    display: block;
-   }
-    .section{
-      background-position: center;
-      background-repeat: no-repeat;
-      -webkit-background-size: cover;
-      background-size: cover;
-    }
-    .section.page1{background:#717cff;}
-    .section.page2{background-image: url(images/bg2.jpg);}
-    .section.page3{background-image: url(images/bg3.jpg);}
-    .section.page4{background-image: url(images/bg4.jpg);text-align: center;}
-
-    .main{
-      width: 400px;position: absolute;top:50%;
-      transform:translateY(-50%)
-    }
-
-    .main.one,.main.three{
-      left:200px;
-    }
-
-    .main.two{
-      right:200px;
-    }
-
-    .main h3{font-size:3em}
-    .main p{margin-bottom: 20px;}
-    .main a{
-      display: block;text-align: center;width: 150px;
-      border: 1px solid #fff;line-height:40px;
-      border-radius:10px;color:white;transition:0.3s
-    }
-    .main a:hover{background-color: #fff;color:#000}
-
-    #onView2st{right:-400px;transition:0.3s}
-    #onView2st.move{right: 200px;}
-
-    #onView3st{left:-400px;transition:0.3s}
-    #onView3st.move{left: 200px;}
-
-    .scroll{
-      position: absolute;bottom: 20px;left: 50%;transform:translateX(-50%);
-      animation-name:xScroll;
-      animation-duration:0.8s;
-      animation-iteration-count:infinite;
-      animation-direction:alternate;
-    }
-    @keyframes xScroll {
-      from{bottom:20px}
-      to{bottom: 40px;}
-    }
-
-  </style>
   <script>
     $(function(){
       $("#fullpage").fullpage({
@@ -132,6 +27,12 @@
         navigation:true,
         afterLoad:function(anchorslink,index){
           console.log(anchorslink+','+index);
+
+          if(index == 1){
+            textAni();
+          }
+
+          new WOW().init();
 
 
           if(index == 2){
@@ -150,10 +51,10 @@
       });
     });
 
-    $(function(){
+
+    function textAni(){
       var paths = $(".svgWrap").find("path");
       var pathLength = paths.length;
-      console.log(pathLength);
 
       for(var i=0;i<pathLength;i++){
         var path = $(".svgWrap path").get(i);
@@ -163,70 +64,56 @@
         path.style.strokeDashoffset = total_length;
         $(path).animate({"strokeDashoffset":0},2000);
       }
+    }
+    function textAniEnd(){
 
-
-
-    });
-
+    }
 
   </script>
 
+
 </head>
 <body>
-  <header>
+   <header>
     <nav id="navTop">
-      <p id="logo"><a href="index.html"><img src="" alt="">LUSH</a></p>
+      <p id="logo"><a href="index.html"><img src="images/lush_logo.png" alt=""></a></p>
       <ul class="clearfix" id="topMenu">
         <li data-menuanchor="m1st"><a href="#m1st">HOME</a></li>
-        <li data-menuanchor="m2st"><a href="#m1st">BATHBOMB</a></li>
-        <li data-menuanchor="m3st"><a href="#m2st">BUBBLE BAR</a></li>
-        <li data-menuanchor="m4st"><a href="#m3st">NAKED</a></li>
-        <li data-menuanchor="m5st"><a href="#m4st">EVENT</a></li>
+        <li data-menuanchor="m2st"><a href="#m2st">BATH BOMB</a></li>
+        <li data-menuanchor="m3st"><a href="#m3st">BUBBLE BAR</a></li>
+        <li data-menuanchor="m4st"><a href="#m4st">NAKED</a></li>
+        <li data-menuanchor="m5st"><a href="#m5st">LUSH STORY</a></li>
       </ul>
     </nav>
   </header>
-
-
- <style>
-  .svgWrap{width: 500px;position: absolute;left:50%;top:50%;transform: translate(-50%,-50%)}
-  .svgWrap path{
-    /* stroke:#6f0293; */
-    stroke:#ffea77;
-    stroke-width:1;
-    fill:#f9678d;
-    animation:textview 1s forwards;
-  }
-  @keyframes textview{
-    from{opacity:0}
-    to{opacity:1}
-  }
-</style>
-  <div id="fullpage" class="fullPage-wrapper">
+  <div id="fullpage">
     <!-- section 1st -->
-    <div class="section page1" data-anchor="m1st">
+    <div class="section page1" data-anchor="m1st" style="background-image: url(images/bg03.png);">
       <div class="svgWrap">
         <svg x="0px" y="0px" viewBox="0 0 200 100" width="100%" height="100%">
           <g>
             <path d="M51.3,65.2l-1.6-3.5l-32.1,1.7l5.5-2.9l11.8-25.7l-5.6-1.8l23.7-2.4l-7.7,4.2l-4.6,20.8l10-4.1l5.1-6L51.3,65.2z"/>
-          	<path d="M104.3,30.8l-10.1,4.4c1.8,1.7,2.9,3.6,3.3,5.8c0.4,2.2,0.1,4.6-1,7.2c-0.5,1.3-1.3,2.6-2.1,3.8c-0.9,1.2-1.9,2.3-3.1,3.4
-          		c-3,2.6-6.6,4.7-10.5,6.3c-4,1.6-7.8,2.4-11.4,2.4c-2.2,0-4.1-0.4-5.8-1.3c-1.7-0.9-3.1-2.1-4-3.7c-1-1.6-1.5-3.4-1.5-5.4
-          		c-0.1-2,0.3-4,1.2-6.1c1.1-2.8,3.1-5.4,5.7-7.8c2.7-2.4,6.2-4.7,10.5-6.8l-9.1-1.2l20.8-2.6c-3,1.7-5.5,3.5-7.6,5.4
-          		c-2,1.9-3.4,3.8-4.2,5.7c-0.7,1.8-0.7,3.3,0,4.5c0.8,1.2,2.1,1.8,3.9,1.8c1.7,0,3.4-0.6,5.1-1.9c1.7-1.3,2.9-2.8,3.7-4.7
-          		c0.5-1.3,0.8-2.5,0.7-3.7c-0.1-1.1-0.5-2.2-1.1-3.2L104.3,30.8z"/>
-          	<path d="M134.5,30.3l-1,12.1c-1.4-1.8-2.8-3.2-4.1-4.1c-1.3-1-2.5-1.4-3.6-1.4c-0.8,0-1.5,0.2-2.2,0.6c-0.6,0.4-1.1,1-1.4,1.8
-          		c-0.4,1-0.3,1.8,0.4,2.6c0.7,0.8,1.9,1.4,3.8,2.1c4.1,1.4,6.7,2.7,7.8,4c1.1,1.3,1.2,3,0.4,5c-1.4,3.3-4.1,6-8.3,8.1
-          		c-4.2,2.1-8.9,3.2-14.1,3.2c-2.7,0-5.1-0.5-7.4-1.4c-2.3-0.9-4.1-2.3-5.6-4l-2.2,5.4l0.8-12.1c1.3,1.5,2.7,2.7,4.2,3.5
-          		c1.5,0.8,3.1,1.2,4.6,1.2c1.6,0,3.1-0.3,4.3-1c1.2-0.7,2-1.6,2.5-2.8c0.5-1.1,0.5-2,0-2.7c-0.5-0.7-1.8-1.4-4-2.2
-          		c-3.2-1.1-5.4-2.5-6.6-4.1c-1.2-1.6-1.3-3.4-0.4-5.5c1.1-2.7,3.2-4.8,6.3-6.5c3.1-1.7,6.6-2.5,10.5-2.5c2.6,0,4.9,0.4,6.9,1.3
-          		c2.1,0.9,4,2.3,5.8,4.1L134.5,30.3z"/>
-          	<path d="M186.5,30.7l-7.2,3l-8.4,25l3,2.5l-23.8,0.8l4.8-2.8l3.9-8.4l-7,1l-4.1,9.9l2.6,2.2L131,62.4l4.1-2.2l13.9-27.2l-4.8-1.6
-          		l18.4-2.4l-4.7,2.9l-3.2,10.5l5.2,2.2l6.5-11.9l-1.8-2.7L186.5,30.7z"/>
+            <path d="M104.3,30.8l-10.1,4.4c1.8,1.7,2.9,3.6,3.3,5.8c0.4,2.2,0.1,4.6-1,7.2c-0.5,1.3-1.3,2.6-2.1,3.8c-0.9,1.2-1.9,2.3-3.1,3.4
+              c-3,2.6-6.6,4.7-10.5,6.3c-4,1.6-7.8,2.4-11.4,2.4c-2.2,0-4.1-0.4-5.8-1.3c-1.7-0.9-3.1-2.1-4-3.7c-1-1.6-1.5-3.4-1.5-5.4
+              c-0.1-2,0.3-4,1.2-6.1c1.1-2.8,3.1-5.4,5.7-7.8c2.7-2.4,6.2-4.7,10.5-6.8l-9.1-1.2l20.8-2.6c-3,1.7-5.5,3.5-7.6,5.4
+              c-2,1.9-3.4,3.8-4.2,5.7c-0.7,1.8-0.7,3.3,0,4.5c0.8,1.2,2.1,1.8,3.9,1.8c1.7,0,3.4-0.6,5.1-1.9c1.7-1.3,2.9-2.8,3.7-4.7
+              c0.5-1.3,0.8-2.5,0.7-3.7c-0.1-1.1-0.5-2.2-1.1-3.2L104.3,30.8z"/>
+            <path d="M134.5,30.3l-1,12.1c-1.4-1.8-2.8-3.2-4.1-4.1c-1.3-1-2.5-1.4-3.6-1.4c-0.8,0-1.5,0.2-2.2,0.6c-0.6,0.4-1.1,1-1.4,1.8
+              c-0.4,1-0.3,1.8,0.4,2.6c0.7,0.8,1.9,1.4,3.8,2.1c4.1,1.4,6.7,2.7,7.8,4c1.1,1.3,1.2,3,0.4,5c-1.4,3.3-4.1,6-8.3,8.1
+              c-4.2,2.1-8.9,3.2-14.1,3.2c-2.7,0-5.1-0.5-7.4-1.4c-2.3-0.9-4.1-2.3-5.6-4l-2.2,5.4l0.8-12.1c1.3,1.5,2.7,2.7,4.2,3.5
+              c1.5,0.8,3.1,1.2,4.6,1.2c1.6,0,3.1-0.3,4.3-1c1.2-0.7,2-1.6,2.5-2.8c0.5-1.1,0.5-2,0-2.7c-0.5-0.7-1.8-1.4-4-2.2
+              c-3.2-1.1-5.4-2.5-6.6-4.1c-1.2-1.6-1.3-3.4-0.4-5.5c1.1-2.7,3.2-4.8,6.3-6.5c3.1-1.7,6.6-2.5,10.5-2.5c2.6,0,4.9,0.4,6.9,1.3
+              c2.1,0.9,4,2.3,5.8,4.1L134.5,30.3z"/>
+            <path d="M186.5,30.7l-7.2,3l-8.4,25l3,2.5l-23.8,0.8l4.8-2.8l3.9-8.4l-7,1l-4.1,9.9l2.6,2.2L131,62.4l4.1-2.2l13.9-27.2l-4.8-1.6
+              l18.4-2.4l-4.7,2.9l-3.2,10.5l5.2,2.2l6.5-11.9l-1.8-2.7L186.5,30.7z"/>
           </g>
         </svg>
       </div>
-        <h3>Lorem ipsum.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, eligendi.</p>
-        <a href="#">more</a>
+
+      <div class="main one wow bounceIn" data-wow-duration="2s">
+        <h3>영국 프레쉬 핸드메이드 코스메틱 브랜드</h3>
+        <p>"러쉬는 자연에서 얻은 신선한 재료와 동물실험을 하지 않는 정직한 재료를 사용하여 모든 제품을 손으로 만듭니다.<br>
+          더불어 공정 거래, 인권 보호, 포장 최소화 등 다양한 캠페인 활동을 통해 기업 윤리와 신념을 알리고 있습니다."</p>
       </div>
       <div class="scroll">
         <a href="#m2st"><img src="images/btn_scroll.png" alt=""></a>
@@ -235,42 +122,52 @@
 
     <!-- section 2st -->
     <div class="section page2" data-anchor="m2st">
-      <video id="bg2_video" autoplay muted loop  data-autoplay>
-        <source src="images/lush_video.mp4" >
+      <video id="lush2_video" autoplay muted loop  data-autoplay>
+        <source src="images/lush2_video.mp4" >
       </video>
-      <div class="main two" id="onView2st">
-        <h3>Lorem ipsum.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, eligendi.</p>
-        <a href="#">more</a>
+      <div>
+        <img src="images/bbb01.png" alt="bbb01" class="bbb01" id="">
+        <img src="images/bbb02.png" alt="bbb02" class="bbb02" id="">
+        <img src="images/bbb03.png" alt="bbb03" class="bbb03" id="">
       </div>
-
+      <div class="main two" id="onView2st">
+        <h3>BATH BOMB</h3>
+        <p>판란히 빛나는 물결에 부드럽게 몸을 맡겨 보세요</p>
+        <a href="#">BATH BOMB</a>
+      </div>
+          <!-- <img src="images/bbb01.png" alt="bbb01" class="bbb01" id=""> -->
     </div>
 
     <!-- section 3st -->
     <div class="section page3" data-anchor="m3st">
+      <video id="lush3_video" autoplay muted loop  data-autoplay>
+        <source src="images/lush3_video.mp4" >
+      </video>
       <div class="main three" id="onView3st">
-        <h3>Lorem ipsum.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, eligendi.</p>
-        <a href="#">more</a>
+        <h3>BUBBLE BAR</h3>
+        <p>구름 속으로 퐁당! 다채로운 버블바의 매력에 빠져 보세요</p>
+        <a href="#">BUBBLE BAR</a>
       </div>
     </div>
 
     <!-- section 4st -->
-    <div class="section page4" data-anchor="m4st">
-      <div class="slide "><h1>Simple Demo</h1></div>
-	    <div class="slide"><h1>Only text</h1></div>
-	    <div class="slide"><h1>And text</h1></div>
-	    <div class="slide"><h1>And more text</h1></div>
+    <div class="section page4" data-anchor="m5st">
+      <div class="slide" id="four">
+        <h3>NAKED</h3>
+        <p>지구를 지키는 네이키드 제품을 소개합니다.</p>
+        </div>
+       <div class="slide"><h1>Only text</h1></div>
+       <div class="slide"><h1>And text</h1></div>
+       <div class="slide"><h1>And more text</h1></div>
     </div>
-  </div>
 
-  <!-- section 4st -->
-  <div class="section page5" data-anchor="m4st">
-    <div class="slide "><h1>Simple Demo</h1></div>
-    <div class="slide"><h1>Only text</h1></div>
-    <div class="slide"><h1>And text</h1></div>
-    <div class="slide"><h1>And more text</h1></div>
-  </div>
-</div>
+    <!-- section 5st -->
+    <div class="section page5" data-anchor="m4st">
+      <div class="slide "><h1>Simple Demo</h1></div>
+       <div class="slide"><h1>Only text</h1></div>
+       <div class="slide"><h1>And text</h1></div>
+       <div class="slide"><h1>And more text</h1></div>
+    </div>
+
 </body>
 </html>
